@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-
-        <activity android:name=".authentication.LoginActivity"
+        <activity android:name=".ARModelView"></activity>
+        <activity android:name=".DetectTopic" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".authentication.LoginActivity"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -24,15 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".authentication.RegisterActivity"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>
