@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cynergy.emulata">
+
+    <!-- Always needed for AR. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- This tag indicates that this application requires ARCore. This results in the application
+        only being visible in the Google Play Store on devices that support ARCore. -->
+    <uses-feature android:name="android.hardware.camera.ar" android:required="true"/>
 
     <application
         android:allowBackup="true"
@@ -8,28 +15,55 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ARModelView"></activity>
-        <activity android:name=".DetectTopic" />
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".authentication.LoginActivity"
-            android:launchMode="singleInstance"
-            android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- This tag indicates that this application requires ARCore. This results in the
+    application only being visible in the Google Play Store on devices that support
+    ARCore. -->
+        <meta-data android:name="com.google.ar.core" android:value="required" />
+
+        <activity android:name=".dashboard.DashboardActivity"/>
+
+        <activity android:name=".ARModelView"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".DetectTopic" />
+
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".authentication.LoginActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
         <activity
             android:name=".authentication.RegisterActivity"
             android:launchMode="singleInstance"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".armodels.solarsystem.SolarActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
