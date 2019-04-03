@@ -2,8 +2,6 @@ package com.cynergy.emulata.dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,14 +15,14 @@ import android.view.MenuItem;
 import com.cynergy.emulata.ARModelView;
 import com.cynergy.emulata.R;
 
-public class Main2Activity extends AppCompatActivity
+public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -82,7 +80,7 @@ public class Main2Activity extends AppCompatActivity
     }
 
     public void startModel(String model) {
-        Intent intent = new Intent(Main2Activity.this, ARModelView.class);
+        Intent intent = new Intent(DashboardActivity.this, ARModelView.class);
         intent.putExtra("MODEL", model);
         startActivity(intent);
     }

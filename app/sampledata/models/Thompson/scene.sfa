@@ -4,18 +4,18 @@
       name: 'Scene_-_Root',
       parameters: [
         {
-          baseColorFactor: [
-            0.0091129999999999996,
-            0.32230999999999999,
-            0.39804600000000001,
-            1,
-          ],
+          baseColorFactor: null,
         },
         {
           baseColor: null,
         },
         {
-          diffuseColorFactor: null,
+          diffuseColorFactor: [
+            0.74943499999999996,
+            0.0033240000000000001,
+            0.13194800000000001,
+            1,
+          ],
         },
         {
           diffuseColor: null,
@@ -24,16 +24,20 @@
           normal: null,
         },
         {
-          metallicFactor: 0,
+          metallicFactor: null,
         },
         {
-          roughnessFactor: 0.52000800000000003,
+          roughnessFactor: null,
         },
         {
-          specularFactor: null,
+          specularFactor: [
+            0,
+            0,
+            0,
+          ],
         },
         {
-          glossinessFactor: null,
+          glossinessFactor: 0.40000000000000002,
         },
         {
           specularGlossiness: null,
@@ -71,10 +75,10 @@
       'Orientation',
     ],
     collision: {},
-    file: 'sampledata/models/Bohr/scene.gltf',
+    file: 'sampledata/models/Thompson/scene.gltf',
     name: 'scene',
     recenter: 'root',
-    scale: 0.04166675,
+    scale: 0.012500000000000001,
   },
   version: '0.54:2',
 }

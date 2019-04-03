@@ -43,4 +43,95 @@ dependencies {
     /* AR Stuff */
     implementation "com.google.ar.sceneform:core:1.7.0"
 
+    //adding volley library
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
 }
+
+
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+sceneform.asset('sampledata/models/Earth/Earth.gltf',
+        'default',
+        'sampledata/models/Earth/Earth.sfa',
+        'src/main/assets/Earth')
+
+sceneform.asset('sampledata/models/Jupiter/Jupiter.gltf',
+        'default',
+        'sampledata/models/Jupiter/Jupiter.sfa',
+        'src/main/assets/Jupiter')
+
+sceneform.asset('sampledata/models/Luna/Luna.gltf',
+        'default',
+        'sampledata/models/Luna/Luna.sfa',
+        'src/main/assets/Luna')
+
+sceneform.asset('sampledata/models/Mars/Mars.gltf',
+        'default',
+        'sampledata/models/Mars/Mars.sfa',
+        'src/main/assets/Mars')
+
+sceneform.asset('sampledata/models/Mercury/Mercury.gltf',
+        'default',
+        'sampledata/models/Mercury/Mercury.sfa',
+        'src/main/assets/Mercury')
+
+sceneform.asset('sampledata/models/Neptune/Neptune.gltf',
+        'default',
+        'sampledata/models/Neptune/Neptune.sfa',
+        'src/main/assets/Neptune')
+
+sceneform.asset('sampledata/models/Saturn/Saturn.gltf',
+        'default',
+        'sampledata/models/Saturn/Saturn.sfa',
+        'src/main/assets/Saturn')
+
+sceneform.asset('sampledata/models/Sol/Sol.gltf',
+        'default',
+        'sampledata/models/Sol/Sol.sfa',
+        'src/main/assets/Sol')
+
+sceneform.asset('sampledata/models/Uranus/Uranus.gltf',
+        'default',
+        'sampledata/models/Uranus/Uranus.sfa',
+        'src/main/assets/Uranus')
+
+sceneform.asset('sampledata/models/Venus/Venus.gltf',
+        'default',
+        'sampledata/models/Venus/Venus.sfa',
+        'src/main/assets/Venus')
+
+sceneform.asset('sampledata/models/Bohr/scene.gltf',
+        'default',
+        'sampledata/models/Bohr/Bohr.sfa',
+        'src/main/assets/Bohr')
+
+sceneform.asset('sampledata/models/Methane/scene.gltf',
+        'default',
+        'sampledata/models/Methane/Methane.sfa',
+        'src/main/assets/Methane')
+
+sceneform.asset('sampledata/models/Mitochondria/scene.gltf',
+        'default',
+        'sampledata/models/Mitochondria/scene.sfa',
+        'src/main/assets/Mitochondria')
+
+sceneform.asset('sampledata/models/PlantCell/scene.gltf',
+        'default',
+        'sampledata/models/PlantCell/scene.sfa',
+        'src/main/assets/PlantCell')
+
+sceneform.asset('sampledata/models/Rutherford/scene.gltf',
+        'default',
+        'sampledata/models/Rutherford/scene.sfa',
+        'src/main/assets/Rutherford')
+
+sceneform.asset('sampledata/models/Ethane/scene.gltf',
+        'default',
+        'sampledata/models/Ethane/scene.sfa',
+        'src/main/assets/Ethane')
+
+sceneform.asset('sampledata/models/Thompson/scene.gltf',
+        'default',
+        'sampledata/models/Thompson/scene.sfa',
+        'src/main/assets/Thompson')

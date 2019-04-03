@@ -31,7 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
-    // private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +41,6 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         /* FireBase FireStore Instance */
         firebaseFirestore = FirebaseFirestore.getInstance();
-        /* FireBase RealTime DataBase Reference */
-        //databaseReference = FirebaseDatabase.getInstance().getReference();
 
         initViews();
         attachButtons();

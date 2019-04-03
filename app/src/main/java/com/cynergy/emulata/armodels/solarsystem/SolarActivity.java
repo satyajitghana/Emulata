@@ -351,7 +351,7 @@ public class SolarActivity extends AppCompatActivity {
     return false;
   }
 
-  private Node createSolarSystem() {
+  public Node createSolarSystem() {
     Node base = new Node();
 
     Node sun = new Node();

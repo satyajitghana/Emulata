@@ -1,0 +1,104 @@
+{
+  materials: [
+    {
+      name: 'TT_checker_512x512_UV_GRID',
+      parameters: [
+        {
+          baseColorFactor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColor: 'TT_checker_512x512_UV_GRID_baseColor',
+        },
+        {
+          diffuseColorFactor: null,
+        },
+        {
+          diffuseColor: null,
+        },
+        {
+          normal: 'TT_checker_512x512_UV_GRID_normal',
+        },
+        {
+          metallicFactor: 1,
+        },
+        {
+          roughnessFactor: 0.5,
+        },
+        {
+          specularFactor: null,
+        },
+        {
+          glossinessFactor: null,
+        },
+        {
+          specularGlossiness: null,
+        },
+        {
+          specularGlossinessCalculation: null,
+        },
+        {
+          metallicRoughness: 'TT_checker_512x512_UV_GRID_metallicRoughness',
+        },
+        {
+          occlusion: null,
+        },
+        {
+          emissiveFactor: [
+            0,
+            0,
+            0,
+            1,
+          ],
+        },
+        {
+          emissive: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/gltf_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/models/Mitochondria/scene.gltf',
+    name: 'scene',
+    recenter: 'root',
+    scale: 0.016097,
+  },
+  samplers: [
+    {
+      file: 'sampledata/models/Mitochondria\\textures\\TT_checker_512x512_UV_GRID_baseColor.png',
+      name: 'TT_checker_512x512_UV_GRID_baseColor',
+      pipeline_name: 'textures/TT_checker_512x512_UV_GRID_baseColor.png',
+    },
+    {
+      file: 'sampledata/models/Mitochondria\\textures\\TT_checker_512x512_UV_GRID_metallicRoughness.png',
+      name: 'TT_checker_512x512_UV_GRID_metallicRoughness',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'textures/TT_checker_512x512_UV_GRID_metallicRoughness.png',
+    },
+    {
+      file: 'sampledata/models/Mitochondria\\textures\\TT_checker_512x512_UV_GRID_normal.png',
+      name: 'TT_checker_512x512_UV_GRID_normal',
+      params: {
+        usage_type: 'Normal',
+      },
+      pipeline_name: 'textures/TT_checker_512x512_UV_GRID_normal.png',
+    },
+  ],
+  version: '0.54:2',
+}

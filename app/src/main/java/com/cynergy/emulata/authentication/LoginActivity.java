@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cynergy.emulata.MainActivity;
 import com.cynergy.emulata.R;
+import com.cynergy.emulata.dashboard.DashboardActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -41,37 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        //Log.d("TOKEN", firebaseUser.getProviderId());
         if (firebaseUser != null) {
             Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_LONG).show();
             // TODO: Go to the AR Activity
-            //Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
-            //startActivity(intent);
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
             startActivity(intent);
             finish();
         }
-
-//        firebaseAuth.addIdTokenListener(new IdTokenListener() {
-//            @Override
-//            public void onIdTokenChanged(@NonNull InternalTokenResult internalTokenResult) {
-//                Log.d("TOKEN", internalTokenResult.getToken());
-//                firebaseAuth.signInWithCustomToken(internalTokenResult.getToken())
-//                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                            if (task.isSuccessful()) {
-//                                Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_LONG).show();
-//                                Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
-//                                startActivity(intent);
-//                            } else {
-//                                Toast.makeText(LoginActivity.this, "Error Logging in " + task.getException(), Toast.LENGTH_LONG).show();
-//                                Log.d("TOKEN", task.getException().toString());
-//                            }
-//                        }
-//                    });
-//            }
-//        });
 
         initViews();
         attachButtons();
@@ -101,10 +77,6 @@ public class LoginActivity extends AppCompatActivity {
                                     FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
                                         @Override
                                         public void onSuccess(InstanceIdResult instanceIdResult) {
-//                                            String deviceToken = instanceIdResult.getToken();
-//                                            MyFirebaseMessagingService.sendRegistrationToServer(deviceToken);
-//                                            Log.d(MyFirebaseMessagingService.TAG, instanceIdResult.getToken());
-//                                            Log.d(MyFirebaseMessagingService.TAG, instanceIdResult.getId());
                                         }
                                     });
                                     Toast.makeText(LoginActivity.this, "Logged In Successfully", Toast.LENGTH_LONG).show();
@@ -116,9 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                                                 }
                                             });
                                     // TODO: Add the AR Activity Here
-                                    // Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
-                                    // startActivity(intent);
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                     startActivity(intent);
                                 }
                             }

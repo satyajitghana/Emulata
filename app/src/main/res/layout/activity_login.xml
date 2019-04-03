@@ -26,9 +26,10 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
                 <ImageView
-                    android:src="@drawable/ic_cloud_06"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp" />
+                    android:src="@drawable/emulata"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginBottom="20dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
